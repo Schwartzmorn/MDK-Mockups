@@ -12,8 +12,15 @@
     <Compile Include="$(MSBuildThisFileDirectory)Mockups\Base\MockInventory.debug.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Mockups\Base\MockTextSurface.debug.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Mockups\Base\MockTextSurface.consts.debug.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mockups\Blocks\MockAttachableTopBlock.debug.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Mockups\Blocks\MockMotorRotor.debug.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Mockups\Blocks\MockMotorStator.debug.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mockups\Blocks\MockMotorSuspension.debug.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mockups\Blocks\MockRemoteControl.debug.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mockups\Blocks\MockShipConnector.debug.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mockups\Blocks\MockShipController.debug.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mockups\Blocks\MockSolarPanel.debug.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mockups\MockIntergridCommunicationSystem.debug.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Mockups\MockTerminalProperty.debug.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Mockups\Asserts\AssertionException.debug.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Mockups\Asserts\Assert.debug.cs" />
@@ -33,5 +40,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Mockups\MockGridTerminalSystem.debug.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Mockups\MockGridProgramRuntimeInfo.debug.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Mockups\MockedRun.debug.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mockups\MockUnicastListener.debug.cs" />
   </ItemGroup>
 </Project>

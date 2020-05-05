@@ -25,14 +25,14 @@ namespace IngameScript.Mockups.Blocks
             set { LowerLimitDeg = FromRads(value); }
         }
         
-        public float LowerLimitDeg { get; set; } = -1;
+        public float LowerLimitDeg { get; set; } = float.MinValue;
         public float UpperLimitRad
         {
-            get { return ToRads(LowerLimitDeg); }
-            set { LowerLimitDeg = FromRads(value); }
+            get { return ToRads(UpperLimitDeg); }
+            set { UpperLimitDeg = FromRads(value); }
         }
 
-        public float UpperLimitDeg { get; set; } = -1;
+        public float UpperLimitDeg { get; set; } = float.MaxValue;
         public float Displacement { get; set; } = 0f;
         public bool RotorLock { get; set; } = false;
 
@@ -52,17 +52,27 @@ namespace IngameScript.Mockups.Blocks
 
         private float FromRads(float value)
         {
-            if (value == -1)
-                return -1;
-
+            if (value == float.MaxValue)
+            {
+                return float.MaxValue;
+            }
+            else if (value == float.MinValue)
+            {
+                return float.MinValue;
+            }
             return value * 180 / Convert.ToSingle(Math.PI);
         }
 
         private float ToRads(float value)
         {
-            if (value == -1)
-                return -1;
-
+            if (value == float.MaxValue)
+            {
+                return float.MaxValue;
+            }
+            else if (value == float.MinValue)
+            {
+                return float.MinValue;
+            }
             return Convert.ToSingle(Math.PI) * value / 180;
         }
 

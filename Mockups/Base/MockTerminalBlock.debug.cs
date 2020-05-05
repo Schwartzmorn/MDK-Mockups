@@ -14,6 +14,7 @@ namespace IngameScript.Mockups.Base
 #endif
     public abstract class MockTerminalBlock : MockCubeBlock, IMyTerminalBlock
     {
+        public static bool ForceSameConstruct = true;
         public Dictionary<long, MyRelationsBetweenPlayerAndBlock> Relationships { get; }
             = new Dictionary<long, MyRelationsBetweenPlayerAndBlock>();
 
@@ -115,7 +116,8 @@ namespace IngameScript.Mockups.Base
         {
             if (other.CubeGrid.EntityId == this.CubeGrid.EntityId)
                 return true;
-
+            else if (ForceSameConstruct)
+                return true;
             throw new NotSupportedException("Cannot currently find links between joined grids");
         }
 
